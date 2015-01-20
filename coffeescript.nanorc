@@ -1,0 +1,15 @@
+syntax "coffeescript" "\.coffee$"
+header "^#!.*/(env +)?coffee"
+
+OPERATOR: "[!&|=/*+-<>]|\<(and|or|is|isnt|not)\>"
+FUNCTION: "[A-Za-z_][A-Za-z0-9_]*:[[:space:]]*(->|\()" "->"
+PLAIN:    "[()]"
+KEYWORD:  "\<(for|of|continue|break|isnt|null|unless|this|else|if|return)\>"
+KEYWORD:  "\<(try|catch|finally|throw|new|delete|typeof|in|instanceof)\>"
+KEYWORD:  "\<(debugger|switch|while|do|class|extends|super)\>"
+KEYWORD:  "\<(undefined|then|unless|until|loop|of|by|when)\>"
+BOOLEAN:  "\<(true|false|yes|no|on|off)\>"
+VARIABLE: "@[A-Za-z0-9_]*"
++STRING
++HASHCOMMENT
++LINT

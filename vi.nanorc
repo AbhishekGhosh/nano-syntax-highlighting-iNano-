@@ -1,0 +1,9 @@
+syntax "vi" "(^|/|\.)(ex|vim)rc$|\.vim"
+
++FUNCTION
+KEYWORD:  "\<([nvxsoilc]?(nore|un)?map|[nvlx]n|[ico]?no|[cilovx][um]|s?unm)\>"
+KEYWORD:  "\<(snor|nun|nm|set|if|endif|let|unlet)\>"
+OPERATOR: "[!&=]"
++STRING
+COMMENT:  "(^|[[:space:]])\"[^"]*$"
++LINT

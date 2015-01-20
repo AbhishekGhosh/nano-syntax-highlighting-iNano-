@@ -1,0 +1,21 @@
+syntax "c" "\.(c(c|pp|xx)?|C)$" "\.(h(h|pp|xx)?|H)$" "\.ii?$"
+
++FUNCTION
+MACRO:     "\<[A-Z_][0-9A-Z_]+\>"
+TYPE:      "\<(float|double|bool|char|int|short|long|void|(un)?signed)\>"
+TYPE:      "\<[a-z0-9_]+_t\>"
+KEYWORD:   "\<(struct|enum|static|const|union|typedef|extern)\>"
+KEYWORD:   "\<(for|if|while|do|else|case|default|switch)\>"
+KEYWORD:   "\<(return|inline|sizeof|auto|register|volatile|restrict)\>"
+KEYWORD:   "\<(try|throw|catch|operator|new|delete)\>"
+JUMP:      "\<(goto|break|continue)\>"
++BOOLEAN
+OPERATOR:  "[-+/*=<>?:!~%&|^]"
+NUMBER:    "\<([0-9]+|0x[0-9a-fA-F]*)\>|'.'"
+MACRO:     "^[[:space:]]*#[[:space:]]*(define|include(_next)?|(un|ifn?)def|endif|el(if|se)|if|warning|error|pragma)"
+ATTRIBUTE: "__attribute__[[:space:]]*\(\([^)]*\)\)" "__(aligned|asm|builtin|hidden|inline|packed|restrict|section|typeof|weak)__"
+STRING:    ""(\\.|[^"])*"|<[A-Za-z_./-]+>"
+ESCAPE:    "\\([\"'abfnrtv\\]|[0-3]?[0-7]{1,2}|x[A-Fa-f0-9]{1,2}|$)"
++CCOMMENT
++TODO
++LINT

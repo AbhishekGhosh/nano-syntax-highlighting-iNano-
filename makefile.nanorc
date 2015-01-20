@@ -1,0 +1,22 @@
+syntax "makefile" "([Mm]akefile|\.ma?k)$"
+header "^#!.*/(env +)?[bg]?make( |$)"
+
+KEYWORD:  "\<(ifeq|ifdef|ifneq|ifndef|else|endif)\>"
+KEYWORD:  "^(export|include|override)\>"
+SECTION:  "^[^:=	]+:"
+OPERATOR: "[=,%]" "\+=|\?=|:=|&&|\|\|"
+FUNCTION: "\$\((abspath|addprefix|addsuffix|and|basename|call|dir)[[:space:]]"
+FUNCTION: "\$\((error|eval|filter|filter-out|findstring|firstword)[[:space:]]"
+FUNCTION: "\$\((flavor|foreach|if|info|join|lastword|notdir|or)[[:space:]]"
+FUNCTION: "\$\((origin|patsubst|realpath|shell|sort|strip|suffix)[[:space:]]"
+FUNCTION: "\$\((value|warning|wildcard|word|wordlist|words)[[:space:]]"
+PLAIN:    "[()$]"
++STRING
+VARIABLE: "\$+(\{[^} ]+\}|\([^) ]+\))"
+VARIABLE: "\$[@^<*?%|+]|\$\([@^<*?%+-][DF]\)"
+ESCAPE:   "\$\$|\\.?"
++HASHCOMMENT
+COMMENT:  "^	@#.*"
+
+# Show trailing whitespace
+color ,green "[[:space:]]+$"

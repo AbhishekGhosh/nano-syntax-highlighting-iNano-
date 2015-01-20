@@ -1,0 +1,14 @@
+/* Element/Class/ID selectors */
+body, .class, #id {
+    margin: 0;
+}
+
+/* Pseudo-classes */
+a:hover, a:active {
+    outline: 0;
+}
+
+/* Attribute selector */
+abbr[title] {
+    border-bottom: 1px dotted;
+}

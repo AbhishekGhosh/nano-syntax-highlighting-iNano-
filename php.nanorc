@@ -1,0 +1,16 @@
+syntax "php" "\.php[2345s~]?$"
+header "^(//|/\*).*[Pp][Hh][Pp]|<\?php\>"
+
+OPERATOR: "[-+/*=<>?:!~%&|]"
+SECTION:  "(<\?(php)?|\?>)"
++FUNCTION
+TYPE:     "\<(float|global|double|bool|char|int|enum|const)\>"
+KEYWORD:  "\<(class|new|private|public|function|for|foreach|if|while|do|var)\>"
+KEYWORD:  "\<(return|else|elseif|case|default|switch)\>"
+JUMP:     "\<(goto|break|continue)\>"
++BOOLEAN
++STRING
+VARIABLE: "\$[A-Za-z_][A-Za-z0-9_]*"
++CCOMMENT
++TODO
++LINT

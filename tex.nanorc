@@ -1,0 +1,6 @@
+syntax "tex" "\.(tex|cls|ltx|sty|dtx|ins|bbl)$"
+
+MACRO:   "\\[A-Za-z]+"
+SECTION: "\\section"
+COMMENT: "%.*"
++LINT

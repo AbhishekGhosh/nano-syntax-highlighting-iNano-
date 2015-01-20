@@ -1,0 +1,13 @@
+syntax "glsl" "\.(frag|vert|fp|vp|glsl)$"
+
++FUNCTION
+TYPE:     "\<(void|bool|bvec2|bvec3|bvec4|int|ivec2|ivec3|ivec4|float|vec2|vec3|vec4|mat2|mat3|mat4|struct|sampler1D|sampler2D|sampler3D|samplerCUBE|sampler1DShadow|sampler2DShadow)\>"
+TYPE:     "\<gl_(DepthRangeParameters|PointParameters|MaterialParameters|LightSourceParameters|LightModelParameters|LightModelProducts|LightProducts|FogParameters)\>"
+KEYWORD:  "\<(const|attribute|varying|uniform|in|out|inout|if|else|return|discard|while|for|do)\>"
+JUMP:     "\<(break|continue)\>"
++BOOLEAN
+OPERATOR: "[-+/*=<>?:!~%&|^]"
+NUMBER:   "\<([0-9]+|0x[0-9a-fA-F]*)\>"
++CCOMMENT
++TODO
++LINT

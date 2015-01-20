@@ -1,0 +1,19 @@
+DEFAULT
+PLAIN
+
+The first 2 lines of this file should be the same color. If they're not,
+please read the "Installation" section of the README.
+
+red
+green
+yellow
+blue
+magenta
+cyan
+
+brightred
+brightgreen
+brightyellow
+brightblue
+brightmagenta
+brightcyan

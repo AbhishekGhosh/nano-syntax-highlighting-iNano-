@@ -1,0 +1,18 @@
+syntax "gitconfig" "git(config|modules)$|\.git/config$"
+
++BOOLEAN
++INI
++STRING
++HASHCOMMENT
++LINT
+
+syntax "git-editmsg" "(COMMIT|TAG)_EDITMSG$"
+
+COMMENT:   "^#.*$"
+color ,red "[[:space:]]+$"
+
+syntax "git-rebase" "git-rebase-todo$"
+
+KEYWORD: "^(edit|fixup|pick|reword|squash|exec|[efprsx])\>"
+NUMBER:  "\<[0-9a-f]{7,40}\>"
+COMMENT: "^#.*"

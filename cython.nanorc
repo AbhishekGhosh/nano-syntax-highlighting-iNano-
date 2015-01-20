@@ -1,0 +1,25 @@
+syntax "cython" "\.(pyx|pxd|pyi)$"
+
++FUNCTION
+KEYWORD:  "\<(and|as|assert|break|class|continue|def|del|elif|else|except)\>"
+KEYWORD:  "\<(exec|finally|for|from|global|if|import|in|is|lambda|not|or)\>"
+KEYWORD:  "\<(pass|print|raise|return|try|while|with|yield|None)\>"
+KEYWORD:  "\<(DEF|ELIF|ELSE|IF)\>"
+
+KEYWORD:  "\<(cp?def( inline)?|cimport|cppclass|ctypedef|extern|include)\>"
+KEYWORD:  "\<(namespace|property|struct)\>"
+TYPE:     "\<(bint|char|double|int|public|void|unsigned)\>"
+
+OPERATOR: "[.:;,+*|=!\%@<>/&-]"
+MACRO:    "@[A-Za-z0-9_]+"
+SECTION:  "__[A-Za-z0-9_]+__"
+BOOLEAN:  "\<(True|False)\>"
++STRING
+STRING:   "['][^']*[^\\][']" "[']{3}.*[^\\][']{3}"
+STRING:   "["][^"]*[^\\]["]" "["]{3}.*[^\\]["]{3}"
+STRING:   start=""""[^"]" end="""""
+STRING:   start="'''[^']" end="'''"
+ESCAPE:   "\\.?"
++HASHCOMMENT
++TODO
++LINT

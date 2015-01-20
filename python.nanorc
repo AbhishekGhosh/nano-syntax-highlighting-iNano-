@@ -1,0 +1,20 @@
+syntax "python" "\.py$" "jhbuildrc$"
+header "^#!.*/(env +)?python[-0-9._]*( |$)"
+
+KEYWORD:  "\<(as|assert|break|class|continue|def|del|elif|else|except)\>"
+KEYWORD:  "\<(exec|finally|for|from|global|if|import|lambda)\>"
+KEYWORD:  "\<(pass|print|raise|return|try|while|with|yield|None)\>"
++FUNCTION
+OPERATOR: "[-+*/|=%<>&~^]|\<(and|not|or|is|in)\>"
+MACRO:    "@[A-Za-z0-9_]+"
+SECTION:  "__[A-Za-z0-9_]+__"
+BOOLEAN:  "\<(True|False)\>"
++STRING
+STRING:   "['][^']*[^\\][']" "[']{3}.*[^\\][']{3}"
+STRING:   "["][^"]*[^\\]["]" "["]{3}.*[^\\]["]{3}"
+STRING:   start=""""[^"]" end="""""
+STRING:   start="'''[^']" end="'''"
+ESCAPE:   "\\.?"
++HASHCOMMENT
++TODO
++LINT

@@ -1,0 +1,13 @@
+syntax "lisp" "(emacs|zile)$" "\.(el|li?sp|scm|ss)$"
+
+FUNCTION: "\([a-z-]+"
+OPERATOR: "\(([-+*/<>]|<=|>=)|'"
+PLAIN:    "\("
+NUMBER:   "\<[0-9]+\>"
+~KEYWORD: "\<nil\>"
+BOOLEAN:  "\<[tT]\>"
+STRING:   "\"(\\.|[^"])*\""
+ESCAPE:   "'[A-Za-z][A-Za-z0-9_-]+"
+ESCAPE:   "\\.?"
+COMMENT:  "(^|[[:space:]]);.*"
++LINT

@@ -1,0 +1,9 @@
+syntax "ledger" "(^|\.|/)ledger$"
+
+SECTION:  "^([0-9]{4}/[0-9]{2}/[0-9]{2}|[=~]) .*"
+NUMBER:   "^[0-9]{4}/[0-9]{2}/[0-9]{2}"
+VARIABLE: "^~ .*"
+FUNCTION: "^= .*"
+KEYWORD:  "^[[:space:]]+\(?[A-Za-z ]+(:[A-Za-z ]+)*\)?"
+OPERATOR: "[*]"
+COMMENT:  "^[[:space:]]*;.*"

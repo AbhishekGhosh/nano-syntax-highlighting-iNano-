@@ -1,0 +1,9 @@
+syntax "cmake" "CMakeLists\.txt$|\.cmake$"
+
++FUNCTION
+BOOLEAN:  "\<(ON|OFF|TRUE|FALSE|YES|NO)\>"
+VARIABLE: "\$\{[A-Za-z0-9_!@#$*?-]+\}"
++STRING
+ESCAPE:   "\\([()#$^]|\\|\")"
++HASHCOMMENT
++LINT

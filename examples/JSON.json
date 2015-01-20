@@ -1,0 +1,16 @@
+{
+    "application": {
+        "window": {
+            "name": "main_window",
+            "width": 500,
+            "height": 500,
+            "visible": true,
+            "tag": null
+        },
+        "text": {
+            "size": 36,
+            "style": "bold",
+            "name": "text1"
+        }
+    }
+}

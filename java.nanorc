@@ -1,0 +1,25 @@
+syntax "java" "\.java$"
+
+# Class
+SECTION:  "class +[A-Za-z0-9]+ *((implements|extends) +[A-Za-z0-9.]+)?"
+
+# Annotation
+ESCAPE:   "@[A-Za-z]+"
+
++FUNCTION
+TYPE:     "\<(boolean|byte|char|double|float|int|long|short|String|void)\>"
+KEYWORD:  "\<(case|catch|default|do|else|finally|for|if)\>"
+KEYWORD:  "\<(new|return|switch|this|throw|transient|try|while)\>"
+KEYWORD:  "\<(abstract|class|extends|final|implements|import|instanceof)\>"
+KEYWORD:  "\<(interface|native|package|private|protected|public|static)\>"
+KEYWORD:  "\<(strictfp|super|synchronized|throws|volatile|null)\>"
+JUMP:     "\<(break|continue)\>"
++BOOLEAN
+OPERATOR: "[-+/*=<>?:!~%&|]"
+NUMBER:   "\<([0-9._]+|0x[A-Fa-f0-9_]+|0b[0-1_]+)[FL]?\>"
++STRING
+ESCAPE:   "\\([btnfr]|'|\"|\\)"
+ESCAPE:   "\\u[A-Fa-f0-9]{4}"
++CCOMMENT
++TODO
++LINT

@@ -1,0 +1,7 @@
+syntax "pkg-config" "\.pc$"
+
+KEYWORD:  "^(Name|Description|URL|Version|Conflicts|Cflags):"
+KEYWORD:  "^(Requires|Libs)(\.private)?:"
+OPERATOR: "="
+VARIABLE: "\$\{[A-Za-z_][A-Za-z0-9_]*\}"
++LINT

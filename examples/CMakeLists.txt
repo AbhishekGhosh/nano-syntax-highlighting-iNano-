@@ -1,0 +1,17 @@
+PROJECT(example C)
+CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
+
+# Build options
+OPTION(BUILD_EXAMPLES "Build examples" OFF)
+OPTION(THREADSAFE "Build threadsafe" ON)
+
+FUNCTION(TARGET_OS_LIBRARIES target)
+    IF(WIN32)
+        TARGET_LINK_LIBRARIES(${target} ws2_32)
+    ELSEIF(CMAKE_SYSTEM_NAME MATCHES "(Solaris|SunOS)")
+        TARGET_LINK_LIBRARIES(${target} socket nsl)
+    ENDIF()
+    IF(THREADSAFE)
+        TARGET_LINK_LIBRARIES(${target} ${CMAKE_THREAD_LIBS_INIT})
+    ENDIF()
+ENDFUNCTION()

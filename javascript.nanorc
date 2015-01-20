@@ -1,0 +1,20 @@
+syntax "JavaScript" "\.js$"
+
+NUMBER:   "\<[-+]?([1-9][0-9]*|0[0-7]*|0x[0-9a-fA-F]+)([uU][lL]?|[lL][uU]?)?\>"
+NUMBER:   "\<[-+]?([0-9]+\.[0-9]*|[0-9]*\.[0-9]+)([EePp][+-]?[0-9]+)?[fFlL]?"
+NUMBER:   "\<[-+]?([0-9]+[EePp][+-]?[0-9]+)[fFlL]?"
++FUNCTION
+KEYWORD:  "\<(break|case|catch|continue|default|delete|do|else|finally)\>"
+KEYWORD:  "\<(for|function|get|if|in|instanceof|new|return|set|switch)\>"
+KEYWORD:  "\<(switch|this|throw|try|typeof|var|void|while|with)\>"
+KEYWORD:  "\<(null|undefined|NaN)\>"
++BOOLEAN
+TYPE:     "\<(Array|Boolean|Date|Enumerator|Error|Function|Math)\>"
+TYPE:     "\<(Number|Object|RegExp|String)\>"
+OPERATOR: "[-+/*=<>!~%?:&|]"
+REGEXP:   "/[^*]([^/]|(\\/))*[^\\]/[gim]*"
++STRING
+ESCAPE:   "\\[0-7][0-7]?[0-7]?|\\x[0-9a-fA-F]+|\\[bfnrt'"\?\\]"
++CCOMMENT
++TODO
++LINT

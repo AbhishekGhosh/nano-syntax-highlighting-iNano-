@@ -1,0 +1,8 @@
+syntax "properties" "\.properties$"
+
+KEYWORD:  "^[[:space:]]*[^#!]([^:= ]|\\[:= ])*[:= ]"
+OPERATOR: "[:=]"
+ESCAPE:   "\\([#!=: ]|$)"
+ESCAPE:   "\\u[[:xdigit:]]{4}"
+COMMENT:  "^[[:space:]]*[#!].*$"
++LINT

@@ -1,0 +1,11 @@
+syntax "peg" "\.l?peg$"
+
+KEYWORD:  "^[[:space:]]*[A-Za-z][A-Za-z0-9_]*[[:space:]]*<-"
+NUMBER:   "\^[+-]?[0-9]+"
+OPERATOR: "[-+*?^/!&]|->|<-|=>"
+MACRO:    "%[A-Za-z][A-Za-z0-9_]*"
+REGEXP:   "\[[^]]*\]"
++STRING
+COMMENT:  "(^|[[:space:]])\-\-.*$"
++TODO
++LINT

@@ -1,0 +1,6 @@
+syntax "yum" "\.repo$|yum.*\.conf$"
+
++INI
+VARIABLE: "\$(releasever|arch|basearch|uuid|YUM[0-9])"
++HASHCOMMENT
++LINT

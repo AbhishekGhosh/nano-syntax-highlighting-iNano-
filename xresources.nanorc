@@ -1,0 +1,9 @@
+syntax "xresources" "X(defaults|resources)$"
+
+TYPE:     "^[[:alnum:]]+\*"
+VARIABLE: "\*[[:alnum:]]+\:"
+NUMBER:   "\<[0-9]+\>"
+OPERATOR: "[*:=]"
++BOOLEAN
++HASHCOMMENT
++LINT

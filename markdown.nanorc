@@ -1,0 +1,17 @@
+syntax "markdown" "\.(md|mkd|mkdn|markdown)$"
+
+# Emphasis
+color green "(^|[[:space:]])(_[^ ][^_]*_|\*[^ ][^*]*\*)"
+
+# Strong emphasis
+color brightgreen "(^|[[:space:]])(__[^ ][^_]*__|\*\*[^ ][^*]*\*\*)"
+
+SECTION:  "^=====*$|^-----*$|^#{1,6}.*"
+NUMBER:   "^[[:space:]]*[\*+-] |^[[:space:]]*[0-9]+\. "
+PLAIN:    "^[[:space:]]+"
+ESCAPE:   "\(([CcRr]|[Tt][Mm])\)" "\.{3}" "(^|[[:space:]])\-\-($|[[:space:]])"
+VARIABLE: "\!?\[[^]]*\]([[:space:]]*\[[^]]*\]|\(.*\))?"
+VARIABLE: "^\[.*\]:[[:space:]]*[^"]*"
+STRING:   "`[^`]*`|^ {4}[^-+*].*"
+COMMENT:  "^>.*"
++LINT

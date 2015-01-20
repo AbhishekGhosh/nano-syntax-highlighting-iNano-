@@ -1,0 +1,21 @@
+syntax "pkgbuild" "PKGBUILD$" "\.install$"
+
+FUNCTION: "^[A-Za-z0-9_+-]+[[:space:]]*\(\)"
+KEYWORD:  "\<(case|do|done|elif|else|esac|fi|for|function|if)\>"
+KEYWORD:  "\<(in|select|then|time|until|while)\>"
+FUNCTION: "\<(echo|exit|export|let|local|read|return|set|shift|umask|unset)\>"
+TYPE:     "\<(pkgname|pkgver|pkgrel|epoch|pkgdesc|arch|url|license)\>"
+TYPE:     "\<(groups|depends|makedepends|checkdepends|optdepends)\>"
+TYPE:     "\<(provides|conflicts|replaces|backup|options|^install)\>"
+TYPE:     "\<(changelog|source|noextract)\>"
+TYPE:     "\<(md5sums|sha1sums|sha256sums|sha384sums|sha512sums)\>"
+TYPE:     "\<(srcdir|pkgdir)\>"
+MACRO:    "\<(strip|docs|libtool|emptydirs|zipman|purge|upx)\>"
+MACRO:    "\<(ccache|distcc|buildflags|makeflags)\>"
+OPERATOR: "[{}()<>!=&|;`$]|\\|\[|\]|-(eq|ne|gt|lt|ge|le|s|n|z)\>"
+STRING:   ""(\\.|[^"])*""
+VARIABLE: "\$\{?[A-Za-z0-9_!@#$*?-]+\}?|`[^`]*`"
+STRING:   "'(\\.|[^'])*'"
+ESCAPE:   "\\.?"
++HASHCOMMENT
++LINT
