@@ -8,6 +8,11 @@ syntax definitions to replace and expand the defaults.
 Note : This is continuation of an unmaintained repo. I have not created all the stuffs.
 Nano is practical for me on SSH. 
 
+OS X Nano
+---------
+
+Apple forgot to update Nano. This way the best way to update OS X Nano - https://thecustomizewindows.com/2015/01/os-x-nano-syntax-highlighting/
+
 Installation
 ------------
 
