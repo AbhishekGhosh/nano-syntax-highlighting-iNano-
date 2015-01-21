@@ -16,6 +16,30 @@ Apple forgot to update Nano. This way the best way to update OS X Nano - https:/
 Installation
 ------------
 
+Shortcut :smile:
+--------
+
+Applicable to GNU Linux, OS X (After Updating Nano from Vintage 2.0 version).
+
+````
+cd ~ && git clone https://github.com/AbhishekGhosh/nano-syntax-highlighting-iNano-.git
+cd nano-syntax* && sudo make install-global TEXT=white
+nano ~/.nanorc
+
+````
+Add these lines and save it
+
+```` 
+include "/usr/local/share/nano/nanorc.nanorc"
+include "/usr/local/share/nano/ALL.nanorc"
+
+````
+
+Done. Do the same on your Linux Server. `cd ~` always will point towards `$HOME`.
+
+Tl;dr :angry:
+-----
+
 Using `make install` will install the syntax definitions to the
 `~/.nano/syntax/` directory.
 
