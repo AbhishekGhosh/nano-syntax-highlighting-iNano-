@@ -30,7 +30,8 @@ nano ~/.nanorc
 Add these lines and save it
 
 ```` 
-include "/usr/local/share/nano/nanorc.nanorc"
+# include "/usr/local/share/nano/nanorc.nanorc" 
+# concatenated by my script #
 include "/usr/local/share/nano/ALL.nanorc"
 
 ````
