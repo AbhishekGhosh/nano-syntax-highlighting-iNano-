@@ -1,5 +1,6 @@
-Description [![Build Status](https://travis-ci.org/AbhishekGhosh/nano-syntax-highlighting-iNano-.svg)](https://travis-ci.org/AbhishekGhosh/nano-syntax-highlighting-iNano-)
+Description 
 -----------
+[![Build Status](https://travis-ci.org/AbhishekGhosh/openshift-docs.svg?branch=master)](https://travis-ci.org/AbhishekGhosh/nano-syntax-highlighting-iNano-)
 
 The syntax highlighting definitions that come bundled with nano are of
 pretty poor quality. This is an attempt at providing a good set of accurate
