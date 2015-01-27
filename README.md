@@ -1,4 +1,4 @@
-Description
+Description [![Build Status](https://travis-ci.org/AbhishekGhosh/nano-syntax-highlighting-iNano-.svg)](https://travis-ci.org/AbhishekGhosh/nano-syntax-highlighting-iNano-)
 -----------
 
 The syntax highlighting definitions that come bundled with nano are of
