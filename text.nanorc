@@ -1,0 +1,18 @@
+##########################################################################
+#      Written By Dr. Abhishek Ghosh under GNU GPL 3.0                   #
+# 	HSTS website : https://thecustomizewindows.com                   #
+#       Email : me@abhishekghosh.pro                                     #
+##########################################################################
+syntax "text" "\.?txt$"
+color brightwhite "^[[:space:]]*((un)?set|include|syntax|i?color).*$"
+color brightgreen "^[[:space:]]*(set|unset)[[:space:]]+(autoindent|backup|backupdir|backwards|boldtext|brackets|casesensitive|const|cut|fill|historylog|matchbrackets|morespace|mouse|multibuffer|noconvert|nofollow|nohelp|nonewlines|nowrap|operatingdir|preserve|punct)\>" 
+color blue "^[[:space:]]*(set|unset)[[:space:]]+(http|HTTP|if|fi|quickblank|quotestr|rebinddelete|rebindkeypad|regexp|smarthome|smooth|speller|suspend|tabsize|tabstospaces|tempfile|view|whitespace|wordbounds)\>"
+color green "^[[:space:]]*(set|unset|include|syntax|https|OK)\>"
+color yellow "^[[:space:]]*i?color[[:space:]]*(bright)?(white|black|red|blue|green|yellow|magenta|cyan)?(,(white|black|red|blue|green|yellow|magenta|cyan|html|php|jsp|htm|css|js|py))?\>"
+color magenta "^[[:space:]]*i?color\>" "\<(start|end)="
+color blue ""(\\.|[^"])*""
+color brightblue "^[[:space:]]*#.*$"
+color cyan "^[[:space:]]*##.*$" 
+color yellow start="<!DOCTYPE" end="[/]?>"
+color yellow start="<!--" end="-->"
+color red    "&[^;]*;" "^[[:space:]]*bad\>"
