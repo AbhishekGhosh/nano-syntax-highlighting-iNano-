@@ -1,12 +1,12 @@
 ##########################################################################
 #      Written By Dr. Abhishek Ghosh under GNU GPL 3.0                   #
-#       HSTS website : https://thecustomizewindows.com                   #
+#      	HSTS website : https://thecustomizewindows.com                   #
 #       Email : me@abhishekghosh.pro                                     #
 ##########################################################################
 syntax "zsh" "\.zshrc"
 color brightwhite "^[[:space:]]*((un)?set|include|syntax|i?color).*$"
-color brightgreen "^[[:space:]]*(set|unset)[[:space:]]+(autoindent|backup|backu$
-color blue "^[[:space:]]*(set|unset)[[:space:]]+(http|HTTP|if|fi|quickblank|quo$
+color brightgreen "^[[:space:]]*(set|unset)[[:space:]]+(autoindent|backup|backupdir|backwards|boldtext|brackets|casesensitive|const|cut|fill|historylog|matchbrackets|morespace|mouse|multibuffer|noconvert|nofollow|nohelp|nonewlines|nowrap|operatingdir|preserve|punct)\>"
+color blue "^[[:space:]]*(set|unset)[[:space:]]+(http|HTTP|if|fi|quickblank|quotestr|rebinddelete|rebindkeypad|regexp|smarthome|smooth|speller|suspend|tabsize|tabstospaces|tempfile|view|whitespace|wordbounds)\>"
 color green "^[[:space:]]*(set|unset|include|syntax|import|export)\>"
 color yellow "^[[:space:]]*(ZSH|ZSH_THEME|source)\>"
 color red "^[[:space:]]*(GO|ruby|RUBY|Ruby|DISABLE_AUTO_UPDATE)\>"
